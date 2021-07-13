@@ -15,4 +15,6 @@ interface IJobRepository
     public function createOrUpdate($id = null, $collection = []);
 
     public function deleteJob($id);
+
+    public function index();
 }
