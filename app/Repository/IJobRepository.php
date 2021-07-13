@@ -16,5 +16,5 @@ interface IJobRepository
 
     public function deleteJob($id);
 
-    public function index();
+//    public function index();
 }
