@@ -23,7 +23,7 @@
                                 </td>
                                 <td class="text-primary w25">
                                     Job
-                                </td>-
+                                </td>
                             </tr>
                             <tr>
                                 <td class="">
