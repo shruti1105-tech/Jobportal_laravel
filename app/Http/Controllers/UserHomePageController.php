@@ -31,6 +31,7 @@ class UserHomePageController extends Controller
     public function getJob($id)
     {
         $jobs = $this->job->getJobById($id);
+//        $city=$this->city->getCityById($id);
         return View::make('user.showJobDetails', compact('jobs'));
     }
 
