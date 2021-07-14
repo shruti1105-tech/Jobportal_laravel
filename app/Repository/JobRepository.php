@@ -51,6 +51,9 @@ class JobRepository implements IJobRepository
     public function getJob()
     {
         return Job::with('cities')->where('city_id',1)->get();
+//        $query=$query['job_name'];
+//        $job=Job::where("job_name","LIKE","%{$query}%")->get();
+//        return compact('job');
     }
 
 //    public function index()

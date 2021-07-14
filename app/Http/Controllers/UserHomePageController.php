@@ -19,10 +19,12 @@ class UserHomePageController extends Controller
         $this->city = $city;
     }
 
-    public function getCityJob()
+    public function getCityJob(Request $request)
     {
         $city = $this->city->getAllCity();
-        $jobs = $this->job->getJob();
+//        $query =$request->except(['_token']);
+//        $jobs = $this->job->getJob($query);
+        $jobs=$this->job->getJob();
         return View::make('user.home', compact('city', 'jobs'));
     }
 

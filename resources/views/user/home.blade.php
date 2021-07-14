@@ -35,7 +35,7 @@
                                     </select>
                                 </td>
                                 <td class="">
-                                    <select name="job_id" class="form-control form-control-lg w-100 border-none"
+                                    <select name="job_name" class="form-control form-control-lg w-100 border-none"
                                             required>
                                         @foreach($jobs as $job)
                                             <option value="{{$job->city_id}}">{{$job->job_name}}</option>
@@ -51,6 +51,5 @@
                 </div>
             </div>
         </div>
-
     </form>
 @endsection
