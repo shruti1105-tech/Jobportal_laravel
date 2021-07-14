@@ -37,8 +37,8 @@
                                 <td class="">
                                     <select name="job_name" class="form-control form-control-lg w-100 border-none"
                                             required>
-                                        @foreach($jobs as $job)
-                                            <option value="{{$job->city_id}}">{{$job->job_name}}</option>
+                                        @foreach(\App\Models\Job::where("city_id",$cities->id)->get() as $jobs)
+                                            <option value="{{$jobs->city_id}}">{{$jobs->job_name}}</option>
                                         @endforeach
                                     </select>
                                 </td>

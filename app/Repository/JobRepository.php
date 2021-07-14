@@ -4,6 +4,7 @@
 namespace App\Repository;
 
 
+use App\Models\City;
 use App\Models\Job;
 use Illuminate\Bus\DatabaseBatchRepository;
 use Illuminate\Support\Facades\DB;
@@ -50,10 +51,15 @@ class JobRepository implements IJobRepository
 
     public function getJob()
     {
-        return Job::with('cities')->where('city_id',1)->get();
+//        return Job::with('cities')->where('city_id',1)->get();
 //        $query=$query['job_name'];
 //        $job=Job::where("job_name","LIKE","%{$query}%")->get();
 //        return compact('job');
+
+        $job=City::select('cities.*')
+            ->join('jobs','jobs.city_id','=','cities.id')
+            ->get();
+        return compact('job');
     }
 
 //    public function index()
