@@ -30,8 +30,8 @@ class UserHomePageController extends Controller
 
     public function getJob($id)
     {
-        $job = $this->job->getJobById($id);
-        return View::make('user.showJobDetails', compact($job));
+        $jobs = $this->job->getJobById($id);
+        return View::make('user.showJobDetails', compact('jobs'));
     }
 
 

@@ -45,7 +45,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <a class="btn btn-info" href="#"
+                        <a class="btn btn-info" href="/jobShow/{{ $jobs->id }}"
                            style="font-size: 15px;padding: 5px;border-radius: 5px">More..</a>
                     </div>
                 </div>

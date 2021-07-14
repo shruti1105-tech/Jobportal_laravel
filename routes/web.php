@@ -55,5 +55,5 @@ Route::get('/job/delete/{id}',[JobController::class,'deleteJob'])->name('job.del
 
 
 Route::get('/home',[UserHomePageController::class,'getCityJob'])->name('home');
-//Route::get('/jobShow/{id}',[UserHomePageController::class,'getJob']);
+Route::get('/jobShow/{id}',[UserHomePageController::class,'getJob']);
 //Route::get('/jobApply/{id}',[UserHomePageController::class,'ApplyJob']);
